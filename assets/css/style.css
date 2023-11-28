@@ -1,8 +1,12 @@
-* {
+* { /* Sets the format for the whole website */
   box-sizing: border-box;
 }
 
-body {
+html { /* This makes the scrolling on the page smooth*/
+  scroll-behavior: smooth;
+}
+
+body { /* Formats the body on the website. It includes the fonts that have been added as well as the line height of the text. */
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -14,10 +18,434 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 { /* Formats how all the h tags to have 0 margin on the website */
   margin: 0;
 }
 
-p {
+h2 { /* Formats how all the h2 text will look across the website */
+  color: rgb(64, 78, 124);
+}
+
+h3 { /* Formats how all the h3 text will look across the website */
+  color: rgb(64, 78, 124);
+}
+
+p { /* Formats how all the p text will look across the website */
   margin: 0;
+  font-size: 16px;
+}
+
+li { /* Takes off the bullet points that are automatically applied to the list. */
+  list-style: none;
+}
+
+a { /* Underlines the links in the navigation bar andakes the font colour aqua blue. */
+  text-decoration: underline 4px;
+  color: aqua;
+  text-underline-offset: 6px; /* This lowers the line further. Stops the J in projects from breaking the line.*/
+}
+
+ul { /* This styles the unordered lists for the whole website.*/
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  margin: 24px 0;
+}
+
+.blue {
+  color: rgb(64, 78, 124);
+}
+
+/* NAVIGATION */
+
+nav { /* This is the parent. It sets the background colour and the overal structure of the nav bar.*/
+  background-color: rgb(64, 78, 124);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+
+.logo { /* Positions the logo in the middle and embeds it in a aqua blue box. */
+  position: relative;
+  font-size: 32px;
+  background-color: aqua;
+  margin: 16px 0;
+  padding: 16px 16px;
+  padding-left: 88px;
+}
+
+.nav__link { /* This gives the elements in the navigation bar the space. */
+  margin: 0 16px;
+  font-size: 24px;
+}
+
+#resume { /* No link to click on */
+  cursor: not-allowed;
+}
+
+/* HERO BANNNER */
+
+.hero__banner { /* The code here sets the background image up just below the navigation bar. The code also puts the words find out more in the bottom right of the section.*/
+  background-image: url(../images/02-hero-bg.jpg);
+  background-position: center;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 0 200px rgba(0,255,255,.2); /* this code lays the faded aqua blue background, on top of the image.*/ 
+}
+
+.subtitle { /* This code styles the words find out more by increasing the font size and incorparating an aqua blue box around it/ */
+  background-color: aqua;
+  margin: 32px 32px;
+  padding: 4px 12px;
+  font-size: 20px;
+}
+
+/* MAIN */
+
+.page__wrapper { /* This is the parent off all the code in the main section */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  font-size: 24px;
+}
+
+.title__wrapper { /* This code controls the titles on the left hand side of the page. It also incorporates a solid blue line to the right, that helps seperate it from the main content.*/
+  max-width: 200px;
+  width: 100%;
+  border-right: 5px solid rgb(64, 78, 124); /* This creates the blue line that seperates the content and titles on the webpage.*/
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+
+/* ABOUT */
+
+#about { /* Parent for the about section */
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.text__wrapper--about /* Allows the seperation of the about text/content from the blue line */ {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* PORTFOLIO CONTAINER */
+
+#projects { /* Parent for the projects section */
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.text__wrapper--projects { /* Creates a blue box around the text embedded in the grids and space around it. */
+  margin: 20px;
+  background-color: aqua;
+}
+
+.project__wrapper { /* This code controls what format the grid will be in */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr;
+  grid-template-areas: 
+  "project1 project1 project1 project1"
+  "project2 project2 project3 project3"
+  "project4 project4 project5 project5";
+  margin: 20px;
+  padding-left: 20px;
+  width: 100%;
+
+}
+
+.project1 { /* Project1 down to Project5: Each one contols each individual grid */
+  grid-area: project1;
+  background-image: url(/assets/images/02-portfolio-4.jpg);
+  object-fit: cover;
+  display: flex;
+  align-items: end;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(64, 78, 124);
+  margin-bottom: 12px;
+  box-shadow: inset 0 0 0 500px rgba(13, 64, 233, 0.3); 
+}
+
+.project2 { /* Project1 down to Project5: Each one contols each individual grid */
+  grid-area: project2;
+  background-image: url(/assets/images/02-portfolio-1.jpg);
+  object-fit: cover;
+  display: flex;
+  align-items: end;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(64, 78, 124);
+  margin-bottom: 12px;
+  box-shadow: inset 0 0 0 70px rgba(13, 64, 233, 0.3); 
+}
+
+.project3 { /* Project1 down to Project5: Each one contols each individual grid */
+  grid-area: project3;
+  background-image: url(/assets/images/02-portfolio-2.jpg);
+  object-fit: cover;
+  display: flex;
+  align-items: end;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(64, 78, 124);
+  margin-bottom: 12px;
+  margin-left: 16px;
+  box-shadow: inset 0 0 0 70px rgba(13, 64, 233, 0.3); 
+}
+
+.project4 { /* Project1 down to Project5: Each one contols each individual grid */
+  grid-area: project4;
+  background-image: url(/assets/images/02-portfolio-3.jpg);
+  object-fit: cover;
+  display: flex;
+  align-items: end;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(64, 78, 124);
+  margin-bottom: 12px;
+  box-shadow: inset 0 0 0 70px rgba(13, 64, 233, 0.3); 
+}
+
+.project5 { /* Project1 down to Project5: Each one contols each individual grid */
+  grid-area: project5;
+  background-image: url(/assets/images/02-run-buddy.jpg);
+  object-fit: cover;
+  display: flex;
+  align-items: end;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(64, 78, 124);
+  margin-bottom: 12px;
+  margin-left: 16px;
+  box-shadow: inset 0 0 0 70px rgba(13, 64, 233, 0.3); 
+}
+
+.project1:hover { /* Project1 down to Project5: Each one contols each individual grids hover animation. On this case we want the box to to not have any shadow when hovered over. */
+  cursor: not-allowed;
+  transition: all .35s ease;
+  box-shadow: none;
+}
+
+.project2:hover { /* Project1 down to Project5: Each one contols each individual grids hover animation. On this case we want the box to to not have any shadow when hovered over. */
+  cursor: not-allowed;
+  transition: all .100s ease;
+  box-shadow: none;
+}
+
+.project3:hover { /* Project1 down to Project5: Each one contols each individual grids hover animation. On this case we want the box to to not have any shadow when hovered over. */
+  cursor: not-allowed;
+  transition: all .100s ease;
+  box-shadow: none;
+}
+
+.project4:hover { /* Project1 down to Project5: Each one contols each individual grids hover animation. On this case we want the box to to not have any shadow when hovered over. */
+  cursor: not-allowed;
+  transition: all .100s ease;
+  box-shadow: none;
+}
+
+.project5:hover { /* Project1 down to Project5: Each one contols each individual grids hover animation. On this case we want the box to to not have any shadow when hovered over. */
+  cursor: not-allowed;
+  transition: all .100s ease;
+  box-shadow: none;
+}
+
+
+/* CONTACT ME */
+
+#contact { /* The parent for contact*/ 
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.contact__wrapper { /* Controls the all the content within the contact section. */
+  margin: 20px;
+  width: 100%;
+}
+
+.contact__link {  /* Gives the links its font size. */
+  font-size: 24px;
+  position: relative;
+  bottom: 1.5em; /* allowed me to move the links up inside its container. */
+}
+
+.contact__text { /* Gives the links its colour. */
+  color: rgb(64, 78, 124);
+}
+
+#twitter,
+#number,
+#email { /* No link to click on */
+  cursor: not-allowed;
+}
+
+/* MEDIA QUERIES */
+
+/* Small phones, tablets, large phones*/
+
+@media screen and (max-width: 768px) {
+
+  a { /* Underlines the links in the navigation bar andakes the font colour aqua blue. */
+    text-decoration: underline 3px;
+    color: aqua;
+    text-underline-offset: 6px; /* This lowers the line further. Stops the J in projects from breaking the line.*/
+  }
+
+  p { /* Formats how all the p text will look across the website */
+    margin: 0;
+    font-size: 12px;
+  }
+
+  /* NAV */
+
+  .logo { /* Positions the logo in the middle and embeds it in a aqua blue box. */
+    position: relative;
+    font-size: 24px;
+    background-color: aqua;
+    margin: 16px 0;
+    padding: 16px 16px;
+    padding-left: 88px;
+  }
+
+  .nav__link { /* This gives the elements in the navigation bar the space. */
+    margin: 0 16px;
+    font-size: 16px;
+  }
+
+  /* HERO BANNNER */
+
+  .subtitle { /* This code styles the words find out more by increasing the font size and incorparating an aqua blue box around it/ */
+    background-color: aqua;
+    margin: 32px 32px;
+    padding: 4px 12px;
+    font-size: 16px;
+  }
+
+  /* MAIN */
+
+  .page__wrapper { /* This is the parent off all the code in the main section */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
+    font-size: 16px;
+  }
+
+  .title__wrapper { /* This code controls the titles on the left hand side of the page. It also incorporates a solid blue line to the right, that helps seperate it from the main content.*/
+    max-width: 150px;
+    width: 100%;
+    border-right: 3px solid rgb(64, 78, 124); /* This creates the blue line that seperates the content and titles on the webpage.*/
+    padding: 0 24px;
+    margin-bottom: 32px;
+  }
+
+  /* CONTACT */
+
+  #contact { /* The parent for contact*/
+    max-width: 768px;
+    width: 100%;
+  }
+ 
+  .contact__link { /* Gives the links its font size. */
+    font-size: 12px;
+  }
+
+}
+
+/* Smaller phones */
+
+@media (max-width: 480px) { /* This resizes the content to be displayed properly on a smaller phone*/
+
+  a { /* Underlines the links in the navigation bar andakes the font colour aqua blue. */
+    text-decoration: underline 2px;
+    color: aqua;
+    text-underline-offset: 6px; /* This lowers the line further. Stops the J in projects from breaking the line.*/
+  }
+
+  p { /* Formats how all the p text will look across the website */
+    margin: 0;
+    font-size: 8px;
+  }
+
+  h3 { /* h3 font size */
+    font-size: 12px;
+  }
+
+  /* NAV */
+
+  .logo { /* Positions the logo in the middle and embeds it in a aqua blue box. */
+    position: relative;
+    font-size: 16px;
+    background-color: aqua;
+    margin: 16px 0;
+    padding: 8px 8px;
+    padding-left: 44px;
+  }
+
+  .nav__link { /* This gives the elements in the navigation bar the space. */
+    margin: 0 16px;
+    font-size: 8px;
+  }
+
+  /* HERO BANNNER */
+
+  .subtitle { /* This code styles the words find out more by increasing the font size and incorparating an aqua blue box around it/ */
+    background-color: aqua;
+    margin: 32px 16px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* MAIN */
+
+  .page__wrapper { /* This is the parent off all the code in the main section */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+    font-size: 10px;
+  }
+
+  .title__wrapper { /* This code controls the titles on the left hand side of the page. It also incorporates a solid blue line to the right, that helps seperate it from the main content.*/
+    max-width: 100px;
+    width: 100%;
+    border-right: 3px solid rgb(64, 78, 124); /* This creates the blue line that seperates the content and titles on the webpage.*/
+    padding: 0 24px;
+    margin-bottom: 32px;
+  }
+
+  /* PROJECTS */
+
+
+  .text__wrapper--projects { /* Creates a aqua coloured around the text embedded in the grids and space around it. */
+    margin: 16px;
+    background-color: aqua;
+  }
+  
+  /* CONTACT */
+
+  #contact { /* The parent for contact*/
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .contact__wrapper { /* Allows the content to go side by side */
+    margin: 0 auto;
+    width: 100%;
+  }
+ 
+  .contact__link { /* Gives the links its font size. */
+    font-size: 8px;
+    position: relative;
+    bottom: 2.5em; /* allowed me to move the links up inside its container. */
+  }
+
+  .contact__link:nth-child(5) { /* Allows me to hide the Twitter link */
+    display: none;
+  }
+
 }

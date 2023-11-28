@@ -5,39 +5,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
+  <title>Danté's Portfolio // Web Developer</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-    </nav>
-  </header>
-
-  <!-- hero banner -->
-  <section class="hero-banner">
+  <!-- main logo / nav - where the user will navigate around my website. -->
+  <nav>
+    <h1 class="logo">Danté Kellman</h1>
     <div>
-      <h2>Cool subtitle here!</h2>
+      <ul>
+        <li class="nav__link">
+          <a href="#about">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="nav__link">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" id="resume">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- hero banner - just an image and text.-->
+  <section class="hero__banner">
+    <div class="subtitle">
+      <h2>Find out more below!</h2>
     </div>
   </section>
 
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
+  <main class="page__wrapper">
+    <!-- about me - this is where I explain more about myself and my experience. -->
+    <section class="page__section" id="about">
+      <div class="title__wrapper">
+        <h2>About</h2>
+    </div>
+      <div class="text__wrapper--about">
+        <p> I'm a 23 year-old <b class="blue">Front-end engineer</b> with a strong passion for
+          developing amazing websites, with great <b class="blue">user experiences.</b>
+          I am currently working as a Social Media and Stakeholder Engagement Manager at the Small Business Commissioner and have been learning
+          coding through different jobs for 4 years. I want to make coding to be the next part of my career.! I'm <b class="blue">experienced</b> and have demonstrated the ability to be a great <b
+              class="blue">problem solver.</b> I am able to code in HTML, CSS, Javascript and React.</p>
+      </div>
     </section>
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
+    <!-- portfolio container - this contains the projects. It is styled into a grid in CSS to display everything clearly. -->
+    <section class="page__section" id="projects">
+      <div class="title__wrapper">
+      <h2>Projects</h2>
+    </div>
+      <div class="project__wrapper">
+    <div class="project1">
+      <div class="text__wrapper--projects">
+        <h3>Surf Report</h3>
+        <p>MERN Stack</p>
+      </div>
+    </div>
+    <div class="project2">
+      <div class="text__wrapper--projects">
+        <h3>LED Wall</h3>
+        <p>Node/IoT</p>
+      </div>
+    </div>
+    <div class="project3">
+      <div class="text__wrapper--projects">
+        <h3>Calculator</h3>
+        <p>Javascript/CSS</p>
+      </div>
+    </div>
+    <div class="project4">
+      <div class="text__wrapper--projects">
+        <h3>Pastel Puzzles</h3>
+        <p>MERN Stack</p>
+      </div>
+    </div>
+    <div class="project5">
+      <div class="text__wrapper--projects">
+        <h3>Run Buddy</h3>
+        <p>HTML/CSS</p>
+      </div>
+    </div>
+</div>
     </section>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
+    <!-- contact - contains the links needed to send the user to the right location. target="_blank" allows the user to be taken to a new tab when clicking the link. -->
+    <section class="page__section" id="contact">
+      <div class="title__wrapper">
+      <h2>Contact</h2>
+    </div>
+      <div class="contact__wrapper">
+        <ul>
+          <li class="contact__link">
+            <a href="#" id="number" class="contact__text">07534422485</a>
+          </li>
+          <li class="contact__link">
+            <a href="#" id="email" class="contact__text">Dante.kellman@icloud.com</a>
+          </li>
+          <li class="contact__link">
+            <a href="https://www.linkedin.com/in/dant%C3%A9-kellman-thompson-8b720720a/" target="_blank" class="contact__text">LinkedIn</a>
+          </li>
+          <li class="contact__link">
+            <a href="https://github.com/DKT15" target="_blank" class="contact__text">GitHub</a>
+          </li>
+          <li class="contact__link" >
+            <a href="#" id="twitter" class="contact__text">Twitter</a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 </body>
