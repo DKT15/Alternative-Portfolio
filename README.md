@@ -29,7 +29,7 @@ The website is easy to use. It has 4 navigation links at the top: About Me, Work
 
 ## Deployment
 
-You can access the website with this link.(https://dkt15.github.io/Alternative-Portfolio/)
+You can access the website with this [link](https://dkt15.github.io/Alternative-Portfolio/)
 
 ## Contributing
 
